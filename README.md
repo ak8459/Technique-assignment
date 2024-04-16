@@ -27,6 +27,31 @@ This project is a simple user management application built using React. It allow
 
  # Prerequisites
   <p>This is an example of how to list things you need to use the software and how to install them.</p> 
-  
-  - npm
-   <p> npm install npm@latest -g </p>
+
+ 
+## Run Locally
+
+Clone the project
+
+ ```bash
+  git clone [https://link-to-project](https://github.com/ak8459/Technique-assignment)
+  ```
+
+Go to the project directory
+
+```bash
+  cd my-project
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run start
+```
+
