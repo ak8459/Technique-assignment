@@ -2,16 +2,17 @@ import { useState } from 'react';
 import './usercard.css'
 import EditUser from './EditUser';
 import { editUser } from '../utils/utils';
-const UserCard = ({ user, handleDelete, users, setUsers }) => {
+import { notify, ToastContainer } from './useToast';
+const UserCard = ({ user, handleDelete }) => {
     const [isEditFormOpen, setIsEditFormOpen] = useState(false);
     const [editedUser, setEditedUser] = useState(user);
-    const handleEdit =  () => {
+    const handleEdit = () => {
         setIsEditFormOpen(!isEditFormOpen);
     };
 
     const handleSave = async () => {
-        const response = await editUser(editedUser.id, editedUser);
-        console.log(response);
+        await editUser(editedUser.id, editedUser);
+        notify('User Edited Successfully!')
 
     };
 
@@ -44,6 +45,7 @@ const UserCard = ({ user, handleDelete, users, setUsers }) => {
                 {isEditFormOpen && (
                     <EditUser editedUser={editedUser} setIsEditFormOpen={setIsEditFormOpen} handleSave={handleSave} handleChange={handleChange} />
                 )}
+                <ToastContainer />
             </div >
         </>
     )

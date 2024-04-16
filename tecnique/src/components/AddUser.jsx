@@ -1,30 +1,22 @@
 import { useState } from 'react'
 import { addUser } from '../utils/utils'
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
+import { notify, ToastContainer } from './useToast';
 const AddUser = ({ toggleIsUserAddedOpen }) => {
     const [newUser, setNewUser] = useState({
         name: '',
         username: '',
         email: '',
     })
-    const notify = () => {
-        toast.success("User added successfully!", {
-            position: "top-center",
-            hideProgressBar: false,
-            autoClose: 1000,
-        });
-    }
+
     const handleFormSubmit = async (e) => {
         e.preventDefault();
         try {
             await addUser(newUser)
-            notify()
+            notify('User added successfully!')
         } catch (error) {
             if (error.response.status === 404) {
-                toast.error("cannot add user!", {
-                    position: "top-center"
-                });
+                notify('cannot add user!')
             }
         }
 
