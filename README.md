@@ -34,13 +34,13 @@ This project is a simple user management application built using React. It allow
 Clone the project
 
  ```bash
-  git clone [https://link-to-project](https://github.com/ak8459/Technique-assignment)
+  git clone https://github.com/ak8459/Technique-assignment
   ```
 
 Go to the project directory
 
 ```bash
-  cd my-project
+  cd tecnique
 ```
 
 Install dependencies
@@ -52,6 +52,6 @@ Install dependencies
 Start the server
 
 ```bash
-  npm run start
+  npm run dev
 ```
 
