@@ -22,11 +22,32 @@ This project is a simple user management application built using React. It allow
 ![React](https://img.shields.io/badge/react-%2320232a.svg?logo=react&logoColor=%2361DAFB&style=for-the-badge)
 
 
-# Getting started
+## Getting started
 <p>This is an example of how you may give instructions on setting up your project locally. To get a local copy up and running follow these simple example steps.</p>
 
- # Prerequisites
-  <p>This is an example of how to list things you need to use the software and how to install them.</p> 
-  
-  - npm
-   <p> npm install npm@latest -g </p>
+## Run Locally
+
+Clone the project
+
+ ```bash
+  git clone https://github.com/ak8459/Technique-assignment
+  ```
+
+Go to the project directory
+
+```bash
+  cd tecnique
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run dev
+```
+
