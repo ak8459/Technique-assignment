@@ -43,7 +43,7 @@ const Todos = () => {
     return (
         <div className="center">
             {
-                users?.map((user) => <UserCard key={user.id} user={user} handleDelete={handleDelete} />)
+                users?.map((user) => <UserCard key={user.id} user={user} users={users} handleDelete={handleDelete} setUsers={setUsers} />)
             }
             <ToastContainer />
         </div>

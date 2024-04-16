@@ -12,12 +12,17 @@ export function deleteUser(userId) {
 }
 
 // request to edit user
-export function editUser(userId,user) {
+export function editUser(userId, user) {
+    console.log(userId)
     return axios.patch(`${baseUrl}/${userId}`, {
         name: user.name,
         username: user.username,
         email: user.email
     })
+}
+
+export function addUser(user) {
+    return axios.post(baseUrl, user)
 }
 
 

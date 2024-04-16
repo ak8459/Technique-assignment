@@ -1,4 +1,3 @@
-import React from 'react'
 
 const EditUser = ({ editedUser, handleSave, handleChange, setIsEditFormOpen }) => {
    

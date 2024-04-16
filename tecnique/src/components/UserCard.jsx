@@ -2,20 +2,17 @@ import { useState } from 'react';
 import './usercard.css'
 import EditUser from './EditUser';
 import { editUser } from '../utils/utils';
-const UserCard = ({ user, handleDelete }) => {
+const UserCard = ({ user, handleDelete, users, setUsers }) => {
     const [isEditFormOpen, setIsEditFormOpen] = useState(false);
     const [editedUser, setEditedUser] = useState(user);
-    const handleEdit = async () => {
+    const handleEdit =  () => {
         setIsEditFormOpen(!isEditFormOpen);
     };
 
     const handleSave = async () => {
-        console.log(editedUser.id, editedUser);
-        await editUser(editedUser.id, editedUser);
+        const response = await editUser(editedUser.id, editedUser);
+        console.log(response);
 
-        setEditedUser(user);
-
-        setIsEditFormOpen(false);
     };
 
     const handleChange = (e) => {
@@ -42,7 +39,7 @@ const UserCard = ({ user, handleDelete }) => {
                         </div>
                     </div>
 
-                    <img src="https://api.dicebear.com/7.x/lorelei/svg" alt="article-cover" />
+                    <img src="https://img.freepik.com/free-vector/isolated-young-handsome-man-different-poses-white-background-illustration_632498-855.jpg?w=740&t=st=1713276416~exp=1713277016~hmac=e30283a33b08af0d8da6358410af3bb9d628cc3c2f45a600f17ea76598446a49" alt="article-cover" />
                 </div>
                 {isEditFormOpen && (
                     <EditUser editedUser={editedUser} setIsEditFormOpen={setIsEditFormOpen} handleSave={handleSave} handleChange={handleChange} />
