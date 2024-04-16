@@ -1,0 +1,197 @@
+.center {
+    display: grid;
+    place-items: center;
+    width: 90%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.article-card {
+    width: 350px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 300ms;
+
+}
+
+.article-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.article-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.article-card .content {
+    box-sizing: border-box;
+    width: 100%;
+    position: absolute;
+    padding: 30px 20px 20px 20px;
+    height: auto;
+    bottom: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+}
+
+.article-card .date,
+.article-card .title {
+    margin: 0;
+
+}
+
+.article-card .date {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 4px;
+}
+
+.article-card .title {
+    font-size: 17px;
+    color: black;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.btn-danger {
+    background: #e74c3c;
+    color: #ffffff;
+}
+
+.btn-danger:hover {
+    background: #c0392b;
+    color: #ffffff;
+}
+
+.btn-round-1,
+.btn-success {
+    border-radius: 8px;
+}
+
+.btn-success {
+    background: #2ecc71;
+    color: #ffffff;
+}
+
+.btn-success:hover {
+    background: #27ae60;
+    color: #ffffff;
+}
+
+.btn {
+    appearance: none;
+    font-family: sans-serif;
+    cursor: pointer;
+    padding: 6px;
+    min-width: 100px;
+    border: px;
+    -webkit-transition: background-color 100ms linear;
+    -ms-transition: background-color 100ms linear;
+    transition: background-color 100ms linear;
+}
+
+.edit-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.edit-form h2 {
+    margin-top: 0;
+}
+
+.edit-form form {
+    margin-top: 10px;
+}
+
+.edit-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.edit-form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn {
+    padding: 8px 15px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+}
+
+
+.edit-form {
+    position: absolute;
+    /* Change to absolute positioning */
+    top: 21%;
+    /* Center vertically */
+    left: 50%;
+    position: fixed;
+    /* Center horizontally */
+    transform: translate(-50%, -50%);
+    /* Center properly */
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    /* Ensure the form is above the card */
+}
+
+.edit-form h2 {
+    margin-top: 0;
+}
+
+.edit-form form {
+    margin-top: 10px;
+}
+
+.edit-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.edit-form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
